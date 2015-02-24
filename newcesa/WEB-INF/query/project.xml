@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<querys>
+	<project>
+		<projectList>
+		<![CDATA[
+			SELECT A.*, B.group_name
+			FROM project A
+			LEFT JOIN user_group B on A.user_group=B.seq
+			$$WHERE$$
+		]]>
+		</projectList>
+		<projectDetail>
+		<![CDATA[
+			SELECT *  
+			FROM project
+			WHERE seq = ?
+		]]>
+		</projectDetail>
+		<regProject>
+		<![CDATA[
+			INSERT INTO project (project_name, project_desc, start_date, end_date, image, user_group, deleteYN, regdate)
+			VALUES (?, ?, ?, ?, ?, ?, 0, now())
+		]]>
+		</regProject>
+		<regProjectLastInsertId>
+        <![CDATA[
+            SELECT LAST_INSERT_ID()
+        ]]>
+        </regProjectLastInsertId>
+		<modProject>
+		<![CDATA[
+			UPDATE project SET
+			project_name = ?,
+			project_desc = ?,
+			start_date = ?,
+			end_date = ?,
+			image = ?,
+			user_group = ?
+			WHERE seq = ?
+		]]>
+		</modProject>
+		<delProject>
+		<![CDATA[
+			UPDATE project SET deleteYN = 1 WHERE seq = ?
+		]]>
+		</delProject>
+		
+
+
+
+		<projectActivityList>
+		<![CDATA[
+			SELECT *
+			FROM project_activity
+			WHERE project_seq =? 
+			ORDER BY seq ASC
+		]]>
+		</projectActivityList>
+		<regActivity>
+		<![CDATA[
+			INSERT INTO project_activity (activity, project_seq)
+			VALUES (?, ?)
+		]]>
+		</regActivity>
+		<delActivity>
+		<![CDATA[
+			DELETE FROM project_activity where project_seq=?
+		]]>
+		</delActivity>
+
+		<projectWordList>
+		<![CDATA[
+			SELECT *
+			FROM project_word
+			WHERE project_seq =? 
+			ORDER BY seq ASC
+		]]>
+		</projectWordList>
+		<regWord>
+		<![CDATA[
+			INSERT INTO project_word (word, project_seq)
+			VALUES (?, ?)
+		]]>
+		</regWord>
+		<delWord>
+		<![CDATA[
+			DELETE FROM project_word where project_seq=?
+		]]>
+		</delWord>
+
+		<projectActivityWordList>
+		<![CDATA[
+			SELECT *
+			FROM project_activity_word
+			WHERE project_seq =? 
+			ORDER BY seq ASC
+		]]>
+		</projectActivityWordList>
+
+		<projectActivityWordFrontList>
+		<![CDATA[
+			SELECT *
+			FROM project_activity_word
+			WHERE project_seq =? and checked_activity=?
+			ORDER BY seq ASC
+		]]>
+		</projectActivityWordFrontList>
+
+		<regActivityWord>
+		<![CDATA[
+			INSERT INTO project_activity_word (checked_activity, checked_word, activity, word, project_seq)
+			VALUES (?, ?, ?, ?, ?)
+		]]>
+		</regActivityWord>
+		<delActivityWord>
+		<![CDATA[
+			DELETE FROM project_activity_word where project_seq=?
+		]]>
+		</delActivityWord>
+			
+		
+		<projectPropertiesList>
+		<![CDATA[
+			SELECT *
+			FROM project_properties
+			WHERE project_seq =?
+		]]>
+		</projectPropertiesList>
+
+		<regProjectProperties>
+		<![CDATA[
+			INSERT INTO project_properties (project_seq, property01, property02, property03, property04, property05, property06, property07, property08, property09, property10, regdate)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())
+		]]>
+		</regProjectProperties>
+
+		<modProjectProperties>
+		<![CDATA[
+			UPDATE project_properties SET
+			property01 = ?,
+			property02 = ?,
+			property03 = ?,
+			property04 = ?,
+			property05 = ?,
+			property06 = ?,
+			property07 = ?,
+			property08 = ?,
+			property09 = ?,
+			property10 = ?
+			WHERE project_seq = ?
+		]]>
+		</modProjectProperties>
+	</project>
+</querys>

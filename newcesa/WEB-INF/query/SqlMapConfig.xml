@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<xml fileName="admin.xml"/>
+	<xml fileName="group.xml"/>
+	<xml fileName="vocabulary.xml"/>
+	<xml fileName="project.xml"/>
+	<xml fileName="member.xml"/>
+</configuration>

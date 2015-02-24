@@ -1,0 +1,26 @@
+SMAP
+_projectProcSaveAs__jsp.java
+JSP
+*S JSP
+*F
++ 1 projectProcSaveAs.jsp
+admin/project/projectProcSaveAs.jsp
++ 2 header.jsp
+include/header.jsp
++ 3 needAdminLogin.jsp
+include/needAdminLogin.jsp
++ 4 footer.jsp
+include/footer.jsp
+*L
+1#1,8:56
+8#1:64
+25#2,59:65
+10#1:124
+1#3,8:125
+8#3:133
+10#3,12:134
+11#1,122:146
+132#1:268
+1#4,8:269
+133#1,2:277
+*E

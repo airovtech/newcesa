@@ -1,0 +1,99 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+#dev7link {
+    position:absolute;
+    top:0;
+    left:50px;
+    background:url(images/dev7logo.png) no-repeat;
+    width:60px;
+    height:67px;
+    border:0;
+    display:block;
+    text-indent:-9999px;
+}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+#slider-wrapper {
+    width:800px;
+    height:255px;
+    margin:0 auto;
+    padding-top:0px;
+    margin-top:0px;
+}
+
+#slider {
+	position:relative;
+    width:800px;
+    height:255px;
+    margin-left:0px;
+	margin-top:0px;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	display:none;
+	left:700px;
+	bottom:-35px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(/images/front/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:2px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(/images/front/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	display:block;
+	background-position:-30px 0;
+	right:-45px;
+}
+a.nivo-prevNav {
+	display:block;
+	left:-45px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}

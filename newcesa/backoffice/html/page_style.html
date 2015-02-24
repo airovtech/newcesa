@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title> D&amp;Tech 7 Consulting 관리자 UI </title>
+<!--[if IE 6]>
+	<script type="text/javascript" src="/backoffice/js/minmax.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/backoffice/js/login_validate.js"></script>
+<script type="text/javascript" src="/backoffice/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/backoffice/js/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="/backoffice/js/jquery-block-ui.js"></script>
+<script type="text/javascript" src="/backoffice/js/calendarpop.js"></script>
+<link rel="stylesheet" type="text/css" href="/backoffice/css/import.css" />
+</head>
+
+<body>
+	<div id="all"><!-- all 시작 -->
+		<div id="header"><!-- header 시작 -->
+			<dl>
+				<dt class="h_logo"><a name="top"><img src="/backoffice/images/common/logo.png" class="abstop pointer png24" alt="로고" /></a></dt>
+				<dd class="h_menu_top">
+					<div>
+						<dl>
+							<dt style="float:left;"><a href="#" class="r_header">로그아웃</a></dt>
+							<dt style="float:left;">|</dt>
+							<dt style="float:left;"><a href="#" class="r_header">사이트바로가기</a></dt>
+						</dl>
+					</div>
+				</dd>
+
+				<dd class="h_menu_list">
+					<div>
+						<dl>
+							<dt class="h_menu h_header_on pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_on pointer'" onclick="">페이지 스타일</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 2</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 3</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 4</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 5</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 6</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 7</dt>
+							<dt class="h_menu h_header_off pointer" onmouseover="this.className='h_menu h_header_on pointer'" onmouseout="this.className='h_menu h_header_off pointer'" onclick="">관리메뉴 8</dt>
+						</dl>
+					</div>
+				</dd>
+			</dl>
+		</div> <!-- header 끝 -->
+		
+		<div id="header_gradation"></div>
+		
+		<div id="all_container"><!-- all_container 시작 -->
+			<div id="content"> <!-- content 시작 -->
+			
+				<div  id="left_warp"><!-- left menu 시작 -->
+				  <div id="left" >
+					<dl>
+						<dt class="top_title">| Left Menu Title</dt>
+						<dt class="depth2_nosel" onmouseover="this.className='depth2_sel pointer'" onmouseout="this.className='depth2_nosel'">기본 스타일</dt>
+						<dt class="depth3_nosel"><a href="#top">_리스트 페이지</a></dt>
+						<dt class="depth3_nosel"><a href="#detail">_상세 페이지</a></dt>
+						<dt class="depth3_nosel"><a href="#inpt_frm">_입력폼</a></dt>
+						<dt class="depth3_nosel"><a href="#search_frm01">_검색폼(I)</a></dt>
+						<dt class="depth3_nosel"><a href="#search_frm02">_검색폼(II)</a></dt>
+						<dt class="depth3_nosel"><a href="#info_ment">_안내 멘트 UI</a></dt>
+						<dt class="depth3_nosel"><a href="#dl_page">_문단 구조 페이지 </a></dt>
+						<dt class="depth3_sel"><a href="#cal_ctrl">_달력 컨트롤</a></dt>
+
+
+
+						<a href="#popup_style" style="text-decoration:none;">	<dt class="depth2_nosel" onmouseover="this.className='depth2_sel pointer'" onmouseout="this.className='depth2_nosel'">팝업 스타일</dt></a>
+					    <dt class="depth2_nosel" style="text-decoration:none;"  onmouseover="this.className='depth2_sel pointer'" onmouseout="this.className='depth2_nosel'">
+					        <a href="#" onclick="window.open('login.html')"  style="font-size:12px; line-height:12px; font-weight:bold; color:#5c5c5c;	cursor:pointer; text-decoration:none;"> 로그인페이지 </a>
+					   </dt>
+					</dl>
+				</div> 
+		    </div><!-- left menu 끝 -->
+				
+			<div id="right_warp"><!-- right 시작 -->
+				<div id="right">
+					<!-- 목록 페이지 시작  -->
+					<div class="top_title">자체 관리 사이트 표준 UI</div>
+					<div id="roof_table" >
+						<table cellpadding="0" cellspacing="0" >
+							<colgroup>
+								<col width="15%"/>
+								<col width="15%"/>
+								<col width="40%"/>
+								<col width="15%"/>
+								<col width="15%"/>
+								<col width="10%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="ta_c">NO</th>
+									<th class="ta_c">구분</th>
+									<th class="ta_c">제목</th>
+									<th class="ta_c">최근 수정일</th>
+									<th class="ta_c">작성일</th>
+									<th class="ta_c">처리</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="ta_c">1</td>
+									<td class="ta_c">구분</td>
+									<td class="ta_l">자체 관리 사이트 표준 UI 이용 지침</td>
+									<td class="ta_c">2010.10.25</td>
+									<td class="ta_c">2010.10.26</td>
+									<td class="ta_c">
+										<input type="button" value="삭제" class="button black" style="height:20px;width:30px;" />
+									</td>
+								</tr>
+								<tr>
+									<td class="ta_c">1</td>
+									<td class="ta_c">구분</td>
+									<td class="ta_l">자체 관리 사이트 표준 UI 설립</td>
+									<td class="ta_c">2010.10.25</td>
+									<td class="ta_c">2010.10.26</td>
+									<td class="ta_c">
+										<input type="button" value="삭제" class="button white" style="height:20px;width:30px;" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="board_footer">
+							<dl id="page_navigate">
+								<dt id="page">
+									<img src="/backoffice/images/btn/pre_dubble_button.png" alt="뒤로가기버튼" width="8" height="5" />
+									<img src="/backoffice/images/btn/pre_button.png" alt="뒤로가기버튼" width="4" height="5" />
+									<font class="f_b">1</font> 
+									<a href="#" >2</a>
+									<a href="#" >3</a>
+									<a href="#" >4</a>
+									<a href="#" >5</a>
+									<a href="#" >6</a>
+									<a href="#" >7</a>
+									<img src="/backoffice/images/btn/next_button.png" alt="뒤로가기버튼" width="4" height="5" />
+									<img src="/backoffice/images/btn/next_dubble_button.png" alt="뒤로가기버튼" width="8" height="5"/>
+								</dt>
+								<dd class="btn_right">
+									<div class="f_r" style="width:101px;">
+									<input type="button" value="추가" class="button black" style="width:40px;" onclick="goSearch('start_day','end_day');" />
+									<input type="button" value="추가" class="button white" style="width:40px;" onclick="goSearch('start_day','end_day');" />
+									</div>
+								</dd>
+							</dl>
+						</div>  
+					</div>
+					<!-- 목록 페이지 끝 -->
+				
+
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="detail"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+
+					<!-- 게시글 상세보기 시작 -->
+					<div class="top_title">자체 관리 사이트 표준 UI</div>
+					<div id="content_detail_wrap" >
+						<div id="content_detail_header">
+							<dl>
+								<dt class="content_detail_header_title">제목</dt>
+								<dd class="content_detail_header_title_view">자체 관리 사이트 표준 UI 이용 지침</dd>
+								<dt class="content_detail_header_reg_time">작성일</dt>
+								<dd class="content_detail_header_reg_time_view">2010.10.05</dd>
+							</dl>
+						 </div>
+						<div id="content_view">
+							본 페이지는 회사 자체 관리 사이트 표준 코딩 가이드 입니다.<br/>
+							회사 자체 관리 사이트 제작시 본 샘플 코드를 이용하여 웹사이트를 재작하여야 합니다.<br/>
+							<span class="fc_warn">본 페이지를 임의로 변경 및 변형 하는 행위는 불허 합니다.</span><br/>
+							※ 필요 시 담당 관리자인 <span class="fc_blue">최형범(개발)</span> 사원과 협의하시고 책임자(문종덕)의 승인 후 변경 또는 추가 가능.<br/>
+						</div>
+						<div id="content_footer">
+							<dl id="content_add_file">
+								<dt>첨부파일</dt>
+								<dd>회사소개서.pptx</dd>
+							 </dl>
+							 <dl id="content_pre">
+								 <dt><img src="/backoffice/images/btn/up_button.png" alt="윗글보기" width="7" height="6" class="image_span"/> 이전 글 보기</dt>
+								 <dd>자체 관리 사이트 표준 UI 설립</dd>
+							 </dl>
+							 <dl id="content_next">
+								<dt><img src="/backoffice/images/btn/down_button.png" alt="아랫글 보기" width="7" height="6" class="image_span" /> 다음 글 보기</dt>
+								<dd>다음 글이 없습니다.</dd>
+							</dl>
+						</div>
+					</div>
+					<!-- 버튼이 오른쪽으로  정렬된  공통 버튼 클래스 -->
+					<div class="btn_group_right_align">
+					   <input type="button" value="목록" class="button black" style="width:40px;"/>
+					</div>
+					<!-- 게시글 상세보기  끝 -->
+					
+
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="inpt_frm"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+
+					<!-- 입력 폼 시작 -->	
+					<div class="top_title">입력 폼</div>			
+					<div id="form_warp" >
+						<dl>
+							<dt class="inpt_dt">이름</dt>
+							<dd class="inpt_dd">홍길동</dd>
+							<dt class="inpt_dt">주민등록번호</dt>
+							<dd class="inpt_dd">950204 - xxxxxx</dd>
+							<dt class="inpt_dt">아이디</dt>
+							<dd class="inpt_dd">
+								<input type="text" title="아이디입력" class="inputTxt" style="width:150px;"/>
+								<input type="button" value="아이디중복검사" class="button white" style="height:20px;"/>
+								<span>5~12자의 영문,숫자,영문+숫자 조합만 사용 가능합니다. </span>
+							</dd>
+							<dt class="inpt_dt">비밀번호</dt>
+							<dd class="inpt_dd"> 
+								<input type="text" title="비밀번호 입력" class="inputTxt" style="width:150px;"/>
+								<span> 7~12자의 영문,숫자,영문+숫자 조합만 사용 가능합니다.</span>
+							</dd>
+							<dt class="inpt_dt">비밀번호확인</dt>
+							<dd class="inpt_dd"> 
+								<input type="text" title="비밀번호 입력 확인" class="inputTxt" style="width:150px;"/>
+								<span> 7~12자의 영문,숫자,영문+숫자 조합만 사용 가능합니다.</span>
+							</dd>
+							<dt class="inpt_dt"> 이메일 </dt>
+							<dd class="inpt_dd"> 
+								<input type="text" title="이메일입력" class="inputTxt" style="width:150px;"/>	@	<input type="text" title="이메일입력" class="inputTxt" style="width:150px;"/>
+								<select style="width:150px;">
+									<option> 선택해주세요 </option>
+								</select> 
+							</dd>
+							<dt class="inpt_dt" style="height:74px;">자택주소</dt>
+							<dd class="inpt_dd" style="height:74px;"> 
+								<input type="text" title="zipcode1" class="inputTxt" style="width:90px;"/> - <input type="text" title="zipcode2" class="inputTxt" style="width:90px;"/>
+								<input type="button" value="우편번호검색" class="button white" style="height:20px;"/><br/>
+								<input type="text" title="zipcode1" class="inputTxt" style="width:285px;margin-top:10px;margin-bottom:5px;"/>	 - <input type="text" title="zipcode2" class="inputTxt" style="width:285px;margin-top:10px;margin-bottom:5px;"/><br/>
+								<span> 주소와 연락처는 이벤트 당첨시 경품발송을 위한 것입니다.정확히 입력해 주세요.</span>
+							</dd>
+							<dt class="inpt_dt">전화번호</dt>
+							<dd class="inpt_dd">
+								<select style="width:65px;">
+									<option> 선택 </option>
+								</select> 
+								<input type="text" title="전화번호 두번째 자리 입력" class="inputTxt" style="width:70px;"/>
+								<input type="text" title="전화번호 세번째 자리 입력" class="inputTxt" style="width:70px;"/>
+							</dd>
+							<dt class="inpt_dt">휴대폰번호</dt>
+							<dd class="inpt_dd"> 
+								<select style="width:65px;">
+									<option> 선택 </option>
+								</select> 
+								<input type="text" title="휴대폰번호 두번째 자리 입력" class="inputTxt" style="width:70px;"/>
+								<input type="text" title="휴대폰번호 세번째 자리 입력" class="inputTxt" style="width:70px;"/>
+							</dd>
+							<dt class="inpt_dt">직업</dt>
+							<dd class="inpt_dd"> 
+								<select>
+									<option> 선택해주세요 </option>
+								</select>        
+							</dd>
+							<dt class="inpt_dt" >수신여부</dt>
+							<dd class="inpt_dd"> 
+								<p style="float:left;margin-right:10px;"> 메일수신 <input type="checkbox" /></p>
+								<p style="float:left;margin-bottom:5px;">SMS수신 <input type="checkbox" /></p>
+								<p style="float:left;margin-left:5px;margin-top:4px;"> <span> 다양한 이벤트 소식과 혜택을 알려드립니다.</span> </p>
+							</dd>
+						</dl>         
+					</div>
+					<div class="btn_group_right_align">
+						<input type="button" value="확인" class="button black" style="width:40px;" onclick="goSearch('start_day','end_day');" />
+						<input type="button" value="취소" class="button white" style="width:40px;" onclick="goSearch('start_day','end_day');" />
+					</div>
+					<!-- 입력 폼 끝 -->	
+
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="search_frm01"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+
+
+    				<!-- 상단 검색 TYPE(1) 시작 -->
+    				<div class="top_title">검색 폼 형태Ⅰ</div>			
+
+					<div id="multi_select_form_warp">
+						<dl>
+							<dt> 업체명 </dt>
+							<dd > <select><option> 선택해주세요 </option></select> </dd>
+							<dt> 판매상태 </dt>
+							<dd> <select><option> 선택해주세요 </option></select> </dd>
+							<dt> 재고상태 </dt>
+							<dd> <select> <option> 선택해주세요 </option> </select> </dd>
+						</dl>    
+						<dl>
+							<dt> 분류 </dt>
+							<dd> <select> <option> 선택해주세요 </option></select> </dd>
+							<dt> 상품 </dt>
+							<dd> <select> <option> 선택해주세요 </option></select> </dd>
+							<dt> 전시상태 </dt>
+							<dd> <select> <option> 선택해주세요 </option> </select> </dd>
+						</dl>    
+    			    </div>
+					<div class="btn_group_right_align">
+						<input type="button" value="검색" class="button black" style="width:40px;" onclick=";" />
+					</div>
+					<!-- 상단 검색 TYPE(1) 끝 -->
+
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="search_frm02"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+
+					<!-- 상단 검색 TYPE(2)시작 -->
+    				<div class="top_title">검색 폼 형태 Ⅱ</div>
+
+					<div id="search_form_inline">
+						<div id="search_form_inline_in">
+							<input type="text"/>
+							<input type="button" value="검색" class="button black btn_in"/>
+							<input type="button" value="등록" class="button white btn_in"/>
+						</div>
+					</div>
+					<!-- 상단 검색 TYPE(2) 끝 -->
+    			   
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="info_ment"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+
+    			    <!-- info창 시작 -->
+					<div class="top_title">안내 맨트 UI</div>	
+
+					<div id="info_box_warp">
+						<div id="info_box_in">
+							<p>
+							* 주문확인을 하지 않거나 출고되지 않은 상품은 주문내역보기에서<span> '주문최소' </span> 를 통해 <span>당일 24:00이전까지 즉시 취소가  </span> 가능합니다.<br/>
+							* 이미 배송완료된 상품의 교환, 반품은 주문내역보기에서 <span> '교환신청''반품신청'</span> 을 통해 처리 가능합니다.<br/>
+							* 교환/반품신청 내역은<span> 마이페이지 > 주문취소/반품내역 </span> 에서 확인하실 수 있습니다.
+							</p>
+						</div>
+					</div>
+					<!-- info 창 끝 -->
+    			   
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="dl_page"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>
+    			    
+    			     <div class="top_title"> 들여쓰기 문단 구조 </div>	
+    				 <div id="doc_wrap">
+                        <dl>
+                            <dt>1. 오랜된 어플 갱신 조건</dt>
+                            <dd> - 갱신 실패시 : 오류횟수 증가 (MOD_ERR_CNT + 1) </dd>
+                            <dd> - 갱신 성공시 : 오류횟수 초기화 (MOD_ERR_CNT = 0) </dd>
+                            <dd> - 갱신 대상 : 최종 수집일자가 10이상 되었고 갱신 실패 횟수가 10회 미만인 어플</dd>
+                     
+                            <dt>2. Google Analytics (구글 방문통계)</dt>
+                            <dd> - 계정 (ceo@dnt7.com / dntechdams) </dd>
+                     
+                            <dt>3. App's Today</dt>
+                            <dd> - 최근3일 집계 재생성 : <a href="/todayStats.do" target="_blank">/todayStats.do</a></dd>
+                            <dd> - Price 그래프 재생성 : <a href="/todayContent.do?conType=Price&amp;refresh=Y" target="_blank">/todayContent.do?conType=Price&amp;refresh=Y</a></dd>
+                            <dd> - Category 그래프 재생성 : <a href="/todayContent.do?conType=Category&amp;refresh=Y" target="_blank">/todayContent.do?conType=Category&amp;refresh=Y</a></dd>
+                            <dd> - Rating 그래프 재생성 : <a href="/todayContent.do?conType=Rating&amp;refresh=Y" target="_blank">/todayContent.do?conType=Rating&amp;refresh=Y</a></dd>
+                            <dd> - Review 그래프 재생성 : <a href="/todayContent.do?conType=Review&amp;refresh=Y" target="_blank">/todayContent.do?conType=Review&amp;refresh=Y</a></dd>
+                     
+                            <dt>4. 프런트 좌/우측 컨텐츠</dt>
+                            <dd> - 프런트의 좌/우측 컨텐츠는 사이트의 성능을 고려하여 메모리에 데이터를 올려놓고 사용한다.</dd>
+                            <dd> - 좌측 컨텐츠와 우측 배너 영역의 데이터를 초기화 하고 다시 생성려면 아래 링크를 클릭하세요.</dd>
+                            <dd>   [<a href="/jsps/refresh/refresh.jsp">컨텐츠 갱신</a>]</dd>
+                     
+                            <dt>5. 프런트 미니차트</dt>
+                            <dd> - 미국, 한국, 기타 국가 순서의 기준으로 출력된다. 미국 이나 한국의 랭킹에 없을 경우 기타 국가 순으로 4개국이 출력된다.</dd>
+                            <dd> - 각 국가의 랭킹 조회 순서는 Top Overall(전체)에 랭킹이 있는 경우 Top Overall의 랭킹이 출력된다.</dd>
+                     
+                            <dt>6. AppChart 상세 페이지의 지정된 일자의 그래프 보기</dt>
+                            <dd> - ex) http://appchart.net/appContentGo.do?appcode=343200656&amp;nation=143441&amp;findDate=20100605</dd>
+                            <dd style="padding-left:45px;">appcode : 어플코드</dd>
+                            <dd style="padding-left:45px;">nation : 국가코드</dd>
+                            <dd style="padding-left:45px;">findDate : 그래프의 끝일자</dd>
+                     
+                            <dt>7. Query</dt>
+                            <dd>- CATEGORY='25204'-- 전체 카테고리</dd>
+                            <dd>- Paid(30), Free(27), Grossing(38)</dd>
+                            <dd>- STR_TO_DATE(#reg_date#, '%Y-%m-%d')</dd>
+                            <dd>- DATE_FORMAT(A.REG_DATE,'%Y-%m-%d')</dd>
+                        </dl>
+                    </div>
+                
+					<div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="cal_ctrl"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>   		
+
+				  <!-- 달력 컨트롤 시작 -->
+				  <div style="float:left;">
+                        <div class="top_title"> 달력 컨트롤 </div>
+                        <div style="width:905px;text-align:center;">
+                            <input type="text" id="start_date" name="start_date" /><input type="button" class="button black" onclick="callCalendar(getElementById('start_date'))" value="시작일"/>
+                            <input type="text" id="end_date" name="end_date" /><input type="button" class="button black" onclick="callCalendar(getElementById('end_date'))" value="종료일"/>
+                        </div>
+				  </div>
+				  <!-- 달력 컨트롤 끝 -->
+
+				  <div style="width:905px;padding:50px 0 50px 0;float:left;"><a name="popup_style"><hr style="width:100%;border:2px dotted; border-color:gray;" /></a></div>   		
+
+				  <!-- 팝업 시작 -->
+				  <div style="float:left;"> 
+				     <div class="top_title"> 팝업 스타일</div>
+				       
+				        <div style="width:905px;text-align:center;">
+				             <input type="button" class="button black" value="기본팝업보기" onclick="window.open('popup_style.html','기본팝업','width=500px, height=480px') "/>
+				             <input type="button" class="button black" id="layerPop_btn" value="레이어팝업보기" />
+				             <!-- input type="button" class="button black" id="btn" value="jQuery팝업"/ -->
+				           
+				            <div id="layerPop" style="display:none;">
+                                <div class="layerPop_header">
+	                                <img src="/backoffice/images/popup/close_button.jpg"  width="20" height="20" id="closeLayer" style="cursor:pointer;" alt="닫기버튼" />
+                                </div>
+                                <div class="layerPop_body">
+                                    <iframe src="/backoffice/html/popup_style.html" frameborder="0" width="500" height="440" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                </div>
+                                <div class="layerPop_footer">
+		                            <img src="/backoffice/images/popup/popup_copyright.jpg" alt="하단카피라이트" width="520" height="40"/>
+	                            </div>      
+                            </div>
+				            
+				            <div id="jqueryPop" style="display:none;">
+                                <div class="layerPop_header" style="background:#656565;">
+	                                <img src="/backoffice/images/popup/close_button.jpg" id="unblock" width="20" height="20" style="cursor:pointer;" alt="닫기버튼" />
+                                </div>
+	                           <div class="layerPop_body">
+                                    <iframe src="/backoffice/html/popup_style.html" frameborder="0" width="500" height="440" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+                                </div>
+                               <div class="layerPop_footer">
+		                            <img src="/backoffice/images/popup/popup_copyright.jpg" alt="하단이미지" width="520" height="40"/>
+	                            </div>
+                            </div>
+				            
+				        </div>
+				    </div> <!-- 팝업 끝 -->
+	                	    	
+		    	    <div style="width:905px;padding:50px 0 50px 0;float:left;"><hr style="width:100%;border:2px dotted; border-color:gray;" /></div>   		
+		    	
+		    	
+		    	
+		    	
+		    	</div>
+		   </div><!-- right 끝 -->
+	   </div><!-- content 끝 -->
+	</div><!-- all_content 끝 -->
+	
+	<div id="footer_all">
+		<div style="width:1200px;height:15px;background:#dadada"></div>
+		<img src="/backoffice/images/common/footer_bg.jpg" alt="하단이미지" width="1200" height="44"/>
+	</div>
+	
+</div><!-- all 끝 -->
+</body>
+</html>

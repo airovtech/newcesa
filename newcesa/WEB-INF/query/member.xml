@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<querys>
+	<member>
+		<memberDetail>
+		<![CDATA[
+			SELECT *  
+			FROM member
+			WHERE seq = ?
+		]]>
+		</memberDetail>
+		<memberDetail2>
+		<![CDATA[
+			SELECT *  
+			FROM member
+			WHERE memberId=? AND password=? AND project_seq=?
+		]]>
+		</memberDetail2>
+		<memberCheck>
+		<![CDATA[
+			SELECT * FROM member WHERE memberid=? and project_seq=?
+		]]>
+		</memberCheck>
+
+		<regMember>
+		<![CDATA[
+			INSERT INTO member (project_seq, memberid, password, regDate, lastLogin)
+			VALUES (?, ?, ?, now(), now())
+		]]>
+		</regMember>
+		<updateMemberLogin>
+		<![CDATA[
+			UPDATE admin SET lastLogin = now() WHERE seq = ?
+		]]>
+		</updateMemberLogin>
+
+		<regMemberCheckValue>
+		<![CDATA[
+			INSERT INTO member_check (project_seq, activity, word, memberid, check_value, add_yn, regdate, list_order)
+			VALUES (?, ?, ?, ?, ?, ?, now(), ?)
+		]]>
+		</regMemberCheckValue>
+
+		<memberCheckValueList>
+		<![CDATA[
+			SELECT * FROM member_check WHERE project_seq=? AND activity=? AND memberid=? ORDER BY list_order ASC
+		]]>
+		</memberCheckValueList>
+
+
+		<delMemberCheckValue>
+		<![CDATA[
+			DELETE FROM member_check WHERE project_seq=? AND activity=? AND memberid=?
+		]]>
+		</delMemberCheckValue>
+
+		<memberPropertiesList>
+		<![CDATA[
+			SELECT A.memberid ,B.property01 ,B.property02 ,B.property03 ,B.property04 ,B.property05 ,B.property06 ,B.property07 ,B.property08 ,B.property09 ,B.property10 
+			FROM member A
+			LEFT JOIN member_properties B on A.project_seq = B.project_seq  AND A.memberid = B.memberid
+			WHERE A.project_seq = ?
+		]]>
+		</memberPropertiesList>
+
+		<regMemberProperties>
+		<![CDATA[
+			INSERT INTO member_properties (project_seq, memberid, property01, property02, property03, property04, property05, property06, property07, property08, property09, property10, regdate)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())
+		]]>
+		</regMemberProperties>
+
+		<delMemberProperties>
+		<![CDATA[
+			DELETE FROM member_properties WHERE project_seq=? AND memberid=?
+		]]>
+		</delMemberProperties>
+
+
+		<memberCheckedStatPoint>
+		<![CDATA[
+			SELECT SUM(check_value) AS sumValue FROM member_check 
+			$$WHERE$$
+		]]>
+		</memberCheckedStatPoint>
+
+		<memberCheckedEtcStatPoint>
+		<![CDATA[
+			SELECT * FROM member_check WHERE add_yn='Y' AND project_Seq=? AND activity=?
+		]]>
+		</memberCheckedEtcStatPoint>
+
+	</member>
+</querys>

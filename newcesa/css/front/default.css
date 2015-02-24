@@ -1,0 +1,49 @@
+/* default Element Style  */
+body { margin:0; padding:0; font-family:Tahoma, Verdana, Arial, Helvetica; font-size:14px; }
+div {margin:0; padding:0;}
+p {margin:0; padding:0;}
+dd {margin-left:0;}
+span {margin:0; padding:0}
+h1, h2 {margin:0;}
+img { border:0;}
+a { border:0;}
+a:link {color:#646464; text-decoration:none;}
+a:visited {color:#646464; text-decoration:none;}
+a:active {color:black; text-decoration:none;}
+
+/* text-align */
+.ta_l { text-align:left; }
+.ta_c { text-align:center; }
+.ta_r { text-align:right; }
+
+.activity {margin:10px 0; color:#ffffff; writing-mode: tb-rl;}
+.activity_bold_black {font-size:1.0em; margin:10px 0; color:#000000; font-weight:bold; text-align:center; padding-left:5px; padding-right:5px;}
+.activity_bold_gray {font-size:0.8em; margin:10px 0; color:#7c7c7c; font-weight:bold; text-align:center;  padding-left:5px; padding-right:5px; }
+.activity_bold_white {font-size:0.7em; margin:10px 0; color:#ffffff; font-weight:bold; text-align:center;  padding-left:5px; padding-right:5px; }
+
+.activity_gray {font-size:13px; margin:10px 0; color:#7c7c7c; font-weight:normal; text-align:center;  padding-left:5px; padding-right:5px; }
+.activity_white {font-size:12px; margin:10px 0; color:#ffffff; font-weight:normal; text-align:center;  padding-left:5px; padding-right:5px; }
+
+.img {width:100%; min-width:39px; max-width:117px; cursor:pointer; padding-bottom:10px; padding-top:10px;}
+.td_bold { font-size:16px; text-align:left;font-weight:bold;vertical-align:middle;padding-bottom:5px;}
+
+
+.wordTable {padding-top:2px; background:url('/img/front/tr_bg.png') bottom left repeat-x; height:10px;}
+
+#mask {  
+	position:absolute;  
+	z-index:9000;
+	width:100%;
+	height:100%;
+	background-color:#000;  
+	display:none;  
+	left:0;
+	top:0;
+}
+
+
+.backLoginId {width:97%; height:22px; background:url('/img/front/txt_id.png') no-repeat left;}
+.backLoginPasswd {width:97%; height:22px; background:url('/img/front/txt_pwd.png') no-repeat left;}
+
+.backLoginId_empty { width:97%; height:22px;}
+.backLoginPasswd_empty { width:97%; height:22px;}

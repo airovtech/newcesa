@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="newcesa" default="all" basedir="." >
+	<property name="home.dir" value="${basedir}/" />
+	<property name="lib.dir" value="/usr/local/resin/lib" />
+	<property name="web.lib.dir" value="/home/project/newcesa/WEB-INF/lib" />
+	<property name="src.dir" value="/WEB-INF/src" />
+	<property name="classes.dir" value="/WEB-INF/classes" />
+	<property name="lib2.dir" value="${home.dir}/WEB-INF/lib" />
+
+	<target name="all">
+		<antcall target="compile"/>
+	</target>
+
+	<target name="cleanall">
+		<antcall target="clean"/>
+	</target>
+
+	<target name="compile">
+		<echo message="Compile start!" />
+		<echo message="java version : ${ant.java.version}" />
+		<javac srcdir="${home.dir}${src.dir}" destdir="${home.dir}${classes.dir}" listfiles="true" debug="on" verbose="false" deprecation="yes" nowarn="yes" encoding="utf-8">
+			<classpath>
+				<pathelement path="${classpath}" />
+				<fileset dir="${lib.dir}">
+					<include name="**/*.jar" />
+					<include name="**/*.zip" />
+				</fileset>
+				<fileset dir="${web.lib.dir}">
+					<include name="**/*.jar" />
+					<include name="**/*.zip" />
+				</fileset>
+				<fileset dir="${lib2.dir}">
+					<include name="**/*.jar" />
+					<include name="**/*.zip" />
+				</fileset>
+				<pathelement location="classes" />
+			</classpath>
+		</javac>
+		<copy todir="${home.dir}${classes.dir}">
+			<fileset dir="${home.dir}${src.dir}" includes="**/*.properties"/>
+		</copy>
+		<echo message="Compile end!" />
+	</target>
+
+	<target name="clean" >
+		<echo message="Delete start!" />
+		<echo message="Delete dir : ${home.dir}${classes.dir}/*" />
+		<delete includeemptydirs="true">
+			<fileset dir="${home.dir}${classes.dir}" includes="**/*"/>
+		</delete>
+		<echo message="Delete end!" />
+	</target>
+
+</project>
+
+

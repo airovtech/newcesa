@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<querys>
+	<group>
+		<groupList>
+		<![CDATA[
+			SELECT *  
+			FROM user_group
+			WHERE deleteYN = 0
+		]]>
+		</groupList>
+
+		<groupDetail>
+		<![CDATA[
+			SELECT *  
+			FROM user_group
+			WHERE seq = ?
+		]]>
+		</groupDetail>
+
+		
+
+		<regGroup>
+		<![CDATA[
+			INSERT INTO user_group (group_name, regdate)
+			VALUES (?, now())
+		]]>
+		</regGroup>
+		<modGroup>
+		<![CDATA[
+			UPDATE user_group SET
+			group_name = ?
+			WHERE seq = ?
+		]]>
+		</modGroup>
+		<delGroup>
+		<![CDATA[
+			UPDATE user_group SET deleteYN = ? WHERE seq = ?
+		]]>
+		</delGroup>
+	</group>
+</querys>

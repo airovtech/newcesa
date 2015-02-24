@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<querys>
+	<vocabulary>
+		<vocabularyList>
+		<![CDATA[
+			SELECT A.*, B.group_name
+			FROM vocabulary A
+			LEFT JOIN user_group B on A.user_group=B.seq
+			$$WHERE$$
+			ORDER BY A.user_group ASC, A.word ASC
+		]]>
+		</vocabularyList>
+		<vocabularyDetail>
+		<![CDATA[
+			SELECT *  
+			FROM vocabulary
+			WHERE SEQ = ?
+		]]>
+		</vocabularyDetail>
+		<regVocabulary>
+		<![CDATA[
+			INSERT INTO vocabulary (word, user_group, regDate)
+			VALUES (?, ?, now())
+		]]>
+		</regVocabulary>
+		<modVocabulary>
+		<![CDATA[
+			UPDATE vocabulary SET
+			word = ?,
+			user_group = ?
+			WHERE seq = ?
+		]]>
+		</modVocabulary>
+		<checkVocabulary>
+		<![CDATA[
+			SELECT * FROM vocabulary WHERE user_group = ? AND word = ? AND deleteYN=0
+		]]>
+		</checkVocabulary>
+		<delVocabulary>
+		<![CDATA[
+			UPDATE vocabulary SET deleteYN=1 WHERE SEQ = ?
+		]]>
+		</delVocabulary>
+		<groupList>
+		<![CDATA[
+			SELECT itable.* FROM (
+			SELECT A.*, B.group_name AS name
+			FROM vocabulary_group A
+			LEFT JOIN user_group B on A.user_group=B.seq
+			$$WHERE$$
+			) itable
+		]]>
+		</groupList>
+		<groupDetail>
+		<![CDATA[
+			SELECT *  
+			FROM vocabulary_group
+			WHERE SEQ = ?
+		]]>
+		</groupDetail>
+		<regGroup>
+		<![CDATA[
+			INSERT INTO vocabulary_group (group_name, user_group, regDate)
+			VALUES (?, ?, now())
+		]]>
+		</regGroup>
+		<modGroup>
+		<![CDATA[
+			UPDATE vocabulary_group SET
+			group_name = ?,
+			user_group = ?
+			WHERE seq = ?
+		]]>
+		</modGroup>
+		<delGroup>
+		<![CDATA[
+			UPDATE vocabulary_group SET deleteYN=1 WHERE SEQ = ?
+		]]>
+		</delGroup>
+
+		<groupSubList>
+		<![CDATA[
+			SELECT A.*, B.word
+			FROM vocabulary_group_sub A
+			LEFT JOIN vocabulary B ON A.vocabulary_seq=B.seq
+			WHERE A.vocabulary_group_seq = ?
+		]]>
+		</groupSubList>
+		<regGroupLastInsertId>
+        <![CDATA[
+            SELECT LAST_INSERT_ID()
+        ]]>
+        </regGroupLastInsertId>
+		<regGroupSub>
+		<![CDATA[
+			INSERT INTO vocabulary_group_sub (vocabulary_seq, vocabulary_group_seq)
+			VALUES (?, ?)
+		]]>
+		</regGroupSub>
+		<delGroupSub>
+		<![CDATA[
+			DELETE FROM vocabulary_group_sub WHERE vocabulary_group_seq = ?
+		]]>
+		</delGroupSub>
+	</vocabulary>
+</querys>

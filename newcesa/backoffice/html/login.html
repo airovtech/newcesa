@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title> 관리자 로그인 </title>
+<script type="text/javascript" src="js/login_validate.js"></script>
+<link rel="stylesheet" type="text/css" href="/backoffice/css/import.css"/>
+</head>
+<body>
+	<div id="login_div">
+		<div id="logo_div">
+			<div>
+				<img src="/backoffice/images/common/logo.png" alt="로고"/>
+			</div>
+		</div>
+		<div id="login_con">
+			<dl>
+				<dt class="member_tit"><img src="/backoffice/images/login/member_login_tit.gif" class="abstop" alt="멤버 로그인"/></dt>
+				<dd class="input_con">
+					<div class="input">
+						<dl>
+							<dt class="tit"><img src="/backoffice/images/login/id_tit.gif" class="abstop" alt="아이디"/></dt>
+							<dt class="txtbox"><input type="text" id="A_ID" name="A_ID" value="" class="loginTBox"/></dt>
+						</dl>
+						<dl>
+							<dt class="tit"><img src="/backoffice/images/login/pwd_tit.gif" class="abstop" alt="패스워드"/></dt>
+							<dt class="txtbox"><input type="password" id="A_PWD" name="A_PWD" value="" class="loginTBox" onkeydown="keyEvent(event.keyCode);"/></dt>
+						</dl>
+					</div>
+					<div class="login_btn"><img src="/backoffice/images/btn/login_btn.gif" class="abstop pointer" alt="로그인 버튼" onclick="loginCheck();"/></div>
+				</dd>
+				<dt class="login_guide">
+					안녕하세요. <span class="fc_warn" style="font-weight:bold;">D&amp;Tech7 Consulting</span>입니다.<br/>
+					아이디와 비밀번호를 입력해 주세요.
+				</dt>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>

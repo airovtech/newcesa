@@ -1,0 +1,73 @@
+/*-----------------------------------------------------------------------------------
+version :		1.0
+author :		Cho jae gu (Dntech7 Consulting)
+e-mail :		ragnos@dnt7.com
+-----------------------------------------------------------------------------------*/
+
+/* = HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+* { margin:0; padding:0;}/
+*body{
+	_overflow:auto;		/* IE6 Hack scroll*/
+}
+html, body{
+	width:100%;
+	height:100%;
+	font:12px Dotum,Verdana, Sans-serif;
+	color:#494949;
+}
+html { margin:0 padding:0;}
+
+form { margin: 0; padding: 0; display : inline; }
+img { border: 0 none;}
+
+
+a:link { text-decoration: none; color:#000000; font:12px Dotum,Verdana, Sans-serif; }
+a:visited { text-decoration: none; color:#000000; font:12px Dotum,Verdana, Sans-serif; }
+a:active { text-decoration: none; color:#000000; font:12px Dotum,Verdana, Sans-serif; }
+a:hover { text-decoration: underline; color:#7b889f; font:12px Dotum,Verdana, Sans-serif; }
+
+.pointer { cursor:pointer; }
+
+ul { list-style:none; }
+
+
+.png24 {
+	behavior:url(http://ui.dnt7.com/backoffice/css/iepngfix/iepngfix.htc)
+}
+select {
+	border:2px solid #eaeaea; 
+	font:9pt Dotum, Verdana, Sans-serif;
+}
+
+/* input Start */
+.inputTxt{	height:18px;	line-height:18px;	background:#FFFFFF; 	border:1px solid #c9c9c9;}
+.check_box {float:left;width:13px;height:13px;}
+.loginTBox { width:141px; line-height:20px; height:20px; border:1px solid #c0c0c0; }
+
+
+/* align */
+.abstop{ vertical-align:top; }
+
+/* font */
+.f_b { font-weight:bold; }
+.fc_warn { color:#FF8C00; }
+.fc_info { color:#adadad; }
+.fc_blue { color:#4AAAF2; }
+
+
+/* align */
+.ta_l{	text-align:left;}
+.ta_c{	text-align:center;}
+.ta_r{	text-align:right;}
+.f_r{	float:right;}
+
+/* a href */
+.r_header { text-decoration: none; color:#7f7f7f; font:11px Dotum,Verdana, Sans-serif; }
+.r_header:link { text-decoration: none; color:#7f7f7f; font:11px Dotum,Verdana, Sans-serif; }
+.r_header:visited { text-decoration: none; color:#7f7f7f; font:11px Dotum,Verdana, Sans-serif; }
+.r_header:active { text-decoration: none; color:#7f7f7f; font:11px Dotum,Verdana, Sans-serif; }
+.r_header:hover { text-decoration: none; color:#7b889f; font:11px Dotum,Verdana, Sans-serif; }
+
+.h_header_off { text-decoration: none; color:#7f7f7f; font:11px Dotum,Verdana, Sans-serif; }
+.h_header_on { text-decoration: none; color:#010101; font:11px Dotum,Verdana, Sans-serif; }

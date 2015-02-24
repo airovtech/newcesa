@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<querys>
+	<admin>
+		<adminList>
+		<![CDATA[
+			SELECT A.*, B.*  
+			FROM admin A
+			LEFT JOIN user_group B on A.user_group=B.seq
+			$$WHERE$$
+		]]>
+		</adminList>
+		<adminDetail>
+		<![CDATA[
+			SELECT *  
+			FROM admin
+			WHERE SEQ = ?
+		]]>
+		</adminDetail>
+		<regAdmin>
+		<![CDATA[
+			INSERT INTO admin (adminid, password, email, user_group, regDate)
+			VALUES (?, ?, ?, ?, now())
+		]]>
+		</regAdmin>
+		<modAdmin1>
+		<![CDATA[
+			UPDATE admin SET
+			email = ? ,
+			user_group = ?
+			WHERE seq = ?
+		]]>
+		</modAdmin1>
+		<modAdmin2>
+		<![CDATA[
+			UPDATE admin SET
+			password = ?,
+			email = ?,
+			user_group = ?
+			WHERE seq = ?
+		]]>
+		</modAdmin2>
+		<checkAdmin>
+		<![CDATA[
+			SELECT * FROM admin WHERE deleteYN = 0 AND adminid = ?
+		]]>
+		</checkAdmin>
+		<updateAdminLogin>
+		<![CDATA[
+			UPDATE admin SET lastLogin = now() WHERE adminid = ?
+		]]>
+		</updateAdminLogin>
+		<delAdmin>
+		<![CDATA[
+			UPDATE admin SET deleteYN = 1 WHERE SEQ = ?
+		]]>
+		</delAdmin>
+	</admin>
+</querys>

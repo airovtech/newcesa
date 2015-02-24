@@ -1,0 +1,459 @@
+/*===================================================================================
+version     : 1.0
+author      : Cho jae gu (Dntech7 Consulting)
+e=mail      : ragnos@dnt7.com
+description : HTML mainLayout Properties
+===================================================================================*/
+
+/* Header Start -------------------------------------------------------------------*/
+#all {
+	position:absolute; 
+	min-width:1900px;
+	width:100%; height:100%; 
+	padding:0; margin:0;
+}
+#all #header {
+	height:47px; 
+	padding:0; margin:0;
+	background:#efefef;
+	
+}
+
+#all #header .h_logo{
+	position:relative;
+	clear:both; 
+	float:left; 
+	width:225px; 
+	padding:12px 0 0 5px; 
+	text-align:center;
+	_display:inline;
+}
+#all #header .h_menu_top{
+	float:right;
+	margin:5px 20px 10px 0;
+}
+#all #header .h_menu_list{
+	float:right;
+	height:20px;
+}
+#all #header .h_menu_list .h_menu {
+	float:left; 
+	margin:2px 0 0 0; padding:0 20px 0 20px; 
+	font-size:14px; 
+	font-weight:bold; 
+}
+
+#header_gradation {height:11px;background:url('/backoffice/images/common/header_gra.jpg') repeat-x;}
+/* Header End ---------------------------------------------------------------------*/
+
+
+/* All Content Start ---------------------------------------------------------------------*/
+#all #all_container{
+	min-height:300px;_height:300px;
+	padding:0; margin:0;
+	background:#e9e9e9;
+}
+#all #all_container #content{
+	float:left;
+	width:100%; height:100%;
+	background:#e9e9e9;
+	padding-bottom:30px;
+}
+#all #all_container #content .ie6_margin{ 
+	float:left; 
+	width:13px; height:10px;
+}
+/* All Content end ---------------------------------------------------------------------*/
+
+/* Left menu Start ---------------------------------------------------------------------
+  
+---------------------------------------------------------------------------------------------- */
+#all #all_container #content #left_warp {
+float:left;
+width:212px;
+border:1px solid #fcfcfc;
+margin:10px 0 0 13px;
+background:#ffffff;
+_display:inline;
+}
+
+#all #all_container #content #left{
+    float:left;
+    width:210px; min-height:250px;
+    border:1px solid #d4d4d4;
+    background:#FFFFFF;
+    padding-bottom:20px;
+    _display:inline;
+
+}
+#all #all_container #content #left .top_title{
+	width:165px; 
+	height:20px;
+	font-size:14px; line-height:20px; 
+	padding:0 0 0 30px; margin:30px 0 20px 0; 
+	font-weight:bold; 
+	color:#000000;
+}
+#all #all_container #content #left .depth2_sel{
+	width:165px; height:18px; 
+	padding:7px 15px 0 30px; margin:0;
+	font-size:12px; line-height:12px;
+	font-weight:bold; color:#000000;
+	background:#d6d6d6; border-top:1px solid #e3e3e3;
+}
+#all #all_container #content #left .depth2_nosel{
+	width:165px; height:18px; 
+	padding:7px 15px 0 30px; margin:0;
+	font-size:12px; line-height:12px; 
+	font-weight:bold; color:#5c5c5c;
+	border-top:1px solid #e3e3e3;
+	cursor:pointer;
+}
+#all #all_container #content #left .depth3_sel{
+	width:160px; height:18px; 
+	padding:10px 15px 15px 35px; margin:0;
+	font-size:12px; line-height:12px;
+	color:#7b889f;
+}
+#all #all_container #content #left .depth3_nosel{
+	width:160px; height:18px; 
+	padding:10px 15px 0 35px; margin:0; 
+	font-size:12px; line-height:12px; 
+	color:#000000;
+}
+#all #all_container #content #left .depth3_bLine0{
+	width:210px; 
+	height:1px; 
+	padding:0 0 0 0; margin:0; 
+	border-bottom:1px solid #e3e3e3;
+	_font-size:0; _line-height:0;		/* IE6 Hack */
+}
+#all #all_container #content #left .depth3_bLine3{
+	width:210px; 
+	height:1px; 
+	padding:0 0 3px 0; margin:0; 
+	border-bottom:1px solid #e3e3e3;
+	_font-size:0; _line-height:0;		/* IE6 Hack */
+}
+/* Left menu end ---------------------------------------------------------------------*/
+
+/* Main content(Right) Start ---------------------------------------------------------------------*/
+#all #all_container #content #right_warp {
+float:left;
+min-height:250px;
+border:1px solid #fcfcfc;
+margin:10px 0 0 13px;
+background:#ffffff;
+_display:inline;
+}
+
+#all #all_container #content #right_warp #right{
+	float:left;
+	border:1px solid #d4d4d4;
+	background:#ffffff;
+	min-width:900px;
+	min-height:250px; 	
+	padding-top:30px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+	_display:inline;
+}
+
+#all #all_container #content #right .top_title{
+	font-size:16px;
+	font-weight:bold;
+	color:#7a879e;
+	margin-bottom:20px;
+	margin-right:5px;
+	float:left;
+}
+#all #all_container #content #right .sub_title{
+	font-size:14px;
+	font-weight:bold;
+	color:#7a879e;
+	margin:2px 0px 20px 0px;
+} 
+
+#all #all_container #content #right #roof_table {
+	clear:both;
+	
+}
+#all #all_container #content #right #roof_table table {
+    margin:0;
+}
+
+#all #all_container #content #right #roof_table thead th { 
+	height:32px; 
+	border-top:2px solid #434343;
+	border-bottom:1px solid #e2e2e2; 
+	padding-left:5px;
+	padding-right:5px;
+	font-weight:bold;
+}
+#all #all_container #content #right #roof_table tbody td { 
+	height:33px; 
+	border-bottom:1px solid #e2e2e2; 
+	padding-left:5px;
+	padding-right:5px;
+	word-wrap:break-word;
+}
+#all #all_container #content #right #board_footer {float:left; 	width:905px; height:50px;	margin:0;}
+#all #all_container #content #right #content_detail_wrap { width:905px;}
+
+#content_detail_header {float:left; width:905px;height:33px; border-top:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2;}
+.content_detail_header_title {float:left; width:80px; height:33px; background:#ececec;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold;text-align:center;line-height:34px;}
+.content_detail_header_title_view { float:left; width:470px;height:33px; background:#ffffff;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold;line-height:34px;padding-left:15px;}
+.content_detail_header_reg_time {float:left; width:90px; height:33px; background:#ececec;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold;text-align:center;line-height:34px;}
+.content_detail_header_reg_time_view {float:left; width:230px; height:33px; background:#ffffff;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;line-height:34px;_display:inline;padding-left:15px;}
+
+#content_view {float:left; width:895px; min-height:110px; padding-top:30px;padding-left:10px;padding-bottom:30px;border-bottom:1px solid #e2e2e2;;font-family:Dotum,Arial;font-size:9pt;color:#5c5c5c;line-height:20px;}
+
+#content_add_file dt { float:left;width:100px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;padding-left:20px;}
+#content_add_file dd { float:left;width:785px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;}
+
+#content_pre {clear:both;}
+#content_pre dt {float:left;width:110px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;padding-left:10px; }
+#content_pre dd {float:left;width:785px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;}
+
+#content_next {clear:both;}
+#content_next dt {float:left; width:110px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;padding-left:10px;}
+#content_next dd {float:left;width:785px;height:30px;font-family:Dotum,Arial;font-size:10pt;color:#5c5c5c;font-weight:bold; border-bottom:1px solid #e2e2e2;line-height:32px;}
+.image_span {display:block;float:left;margin-left:0;margin-top:12px;margin-right:5px;_display:inline;}
+#content_detail_footer_button_group { float:right;margin-top:15px;}
+#footer_all {clear:both;}
+/* Main content (right) End ---------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------
+ * Content Page 요소 정의
+------------------------------------------------------------------------------*/
+/* Page Navigate Start */
+#page_navigate{
+	clear:both;
+	width:905px; height:40px;
+	padding:20px 0 0 0; text-align:center;
+}
+#page_navigate #page{
+	position:absolute;
+	width:905px;
+	padding:0; margin:7px 0 0 0;
+	text-align:center;
+}
+.btn_left{
+	text-align:left;
+}
+.btn_right{
+	width:905px;
+	text-align:right;
+}
+
+/* 2010.11.05 추가 */
+    /* 상단 검색 TYPE(1) */
+#multi_select_form_warp {clear:both;width:902px;height:92px;border:2px solid #dbdbdb;}
+#multi_select_form_warp dl {float:left;width:450px;}
+#multi_select_form_warp dt {clear:both;float:left;width:100px;height:21px;background:#ececec;border-bottom:1px solid #e2e2e2;    background:#ececec;	font-weight:bold;	padding-top:9px;	padding-left:20px;    }
+#multi_select_form_warp dd {float:left;height:25px;width:310px;border-bottom:1px solid #e2e2e2;    padding-top:5px;    padding-left:20px;    }
+#multi_select_form_warp dd select {     width:210px;}    
+
+    /* 상단 검색 TYPE(2) */
+#search_form_inline { width:905px; height:28px;}
+#search_form_inline_in { width:100%; text-align:right; background:#ffffff; font-family:Dotum,Arial;color:#5c5c5c; font-weight:bold;}
+
+    /* 4각 info box */
+#info_box_warp {clear:both;width:905px;height:90px;float:left;border:1px solid #dbdbdb;}
+#info_box_in {width:903px;height:88px;background:#ececec;border:1px solid #ffffff;}
+#info_box_in p {font-family:Dotum,Arial;font-size:10pt;color:#676566;line-height:20px;margin-left:20px;margin-top:15px;}
+#info_box_in p span {color:#4aaaf0;}
+
+    /* 입력 폼 */
+#form_warp {clear:both;width:905px;border-top:2px solid #434343;}
+.inpt_dt {float:left;width:105px;_height:30px;min-height:30px;background:#ececec;border-bottom:1px solid #e2e2e2;font-weight:bold;padding:9px 0 0 20px;}
+
+.inpt_dd {float:left;width:760px;_height:30px;min-height:30px;border-bottom:1px solid #e2e2e2;padding:9px 0 0 20px;}
+.inpt_dd span { color:#adadad;font-size:8pt;}
+
+.inpt_dd2 {float:left;width:307.5px;_height:30px;min-height:30px;border-bottom:1px solid #e2e2e2;padding:9px 0 0 20px;}
+.inpt_dd2 span { color:#adadad;font-size:8pt;}
+
+.inpt_cdt {float:left;width:105px;_height:30px;min-height:30px;background:#ececec;border-bottom:1px solid #e2e2e2;font-weight:bold;padding:9px 0 0 20px;}
+
+.inpt_cdd {float:left;width:760px;_height:30px;min-height:30px;border-bottom:1px solid #e2e2e2;padding:9px 0 0 20px;}
+.inpt_cdd span { color:#adadad;font-size:8pt;}
+
+.inpt_cdd2 {width:307.5px;_height:30px;min-height:30px;border-bottom:1px solid #e2e2e2;padding:9px 0 0 20px;}
+.inpt_cdd2 span { color:#adadad;font-size:8pt;}
+
+    /* btn_group_right_align */
+.btn_group_right_align {float:left;width:905px;margin-top:10px;text-align:right;}
+    
+    /* 들여쓰기 문단 구조 */
+#doc_wrap { float:left;}
+#doc_wrap dl { margin-top:10px;margin-left:30px;}
+#doc_wrap dt { padding-top:10px; line-height:18px;}
+#doc_wrap dd { padding-left:15px; line-height:18px;}
+
+    
+
+/*
+ * 추가적으로 정의한 CSS (2011.07.20 by MJD)
+ */ 
+.formTable {
+	border-bottom: 2px solid #434343;
+	border-top: 2px solid #434343;
+	border-collapse: collapse;
+	width: 100%;
+}   
+
+.formTable th {
+	height: 33px;
+	background-color: #ECECEC;
+	border-bottom: 1px solid #E2E2E2;
+}
+
+.formTable td {
+	height: 33px;
+	padding-left:10px;
+	border-bottom: 1px solid #E2E2E2;
+}
+
+.formTable .content {
+	height:100px;
+	padding:20px;
+}       
+
+.sIcon {
+	height: 25px;
+	vertical-align: middle;
+	width: 25px;
+}   
+
+.content .more {
+	height: 85px;
+	overflow: hidden;
+}       
+
+.tb {
+	padding-bottom:10px;
+}
+
+
+.activityTable
+{
+	border-collapse:collapse;
+	border: 1px solid gray;
+}
+
+.activityTable th
+{
+	height: 50px;
+	border-collapse:collapse;
+	background-color: #ECECEC;
+	border: 1px solid gray;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.activityTable td
+{
+	height: 50px;
+	border-collapse:collapse;
+	border: 1px solid gray;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+}
+.activityTable img
+{
+	padding-left:2px;
+	padding-top:3px;
+	padding-right:2px;
+}
+
+.layerTable th
+{
+	height: 30px;
+	border-collapse:collapse;
+	background-color: #ECECEC;
+	border: 1px solid gray;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.layerTable td
+{
+	height: 30px;
+	border-collapse:collapse;
+	border: 1px solid gray;
+	text-align:left;
+	padding-left:10px;
+	padding-right:10px;
+}
+.layerTable img
+{
+	padding-left:2px;
+	padding-top:3px;
+	padding-right:2px;
+}
+
+
+
+/* 마스크 뛰우기 */
+ #mask {  
+   position:absolute;  
+   z-index:9000;
+   width:100%;
+   height:100%;
+   background-color:#000;  
+   display:none;  
+   left:0;
+   top:0;
+ } 
+  
+/*
+ 팝업으로 뜨는 윈도우 css  
+*/ 
+ .layerWindow{
+   display: none;
+   position:absolute;  
+   left:50%;
+   top:50px;
+   margin-left: -500px;
+   width:1000px;
+   height:600px;
+   background-color:#FFF;
+   z-index:10000;
+   text-align:center;
+   border: 1px solid #FFFFFF;
+ }
+
+
+ .propertiesTable
+{
+	border-collapse:collapse;
+	border: 1px solid gray;
+}
+
+.propertiesTable th
+{
+	height: 30px;
+	border-collapse:collapse;
+	background-color: #ECECEC;
+	border: 1px solid gray;
+	text-align:center;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.propertiesTable td
+{
+	height: 30px;
+	border-collapse:collapse;
+	border: 1px solid gray;
+	text-align:center;
+	padding-left:10px;
+	padding-right:10px;
+}
